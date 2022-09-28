@@ -1,0 +1,104 @@
+@import '../../styles.scss';
+
+.contact {
+  padding: 25px 0;
+
+  &__title {
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    color: #111111;
+    margin-bottom: 14px;
+
+    &-first {
+      color: #FFBC00;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+
+    @include onDesktop {
+      padding: 60px;
+    }
+
+    &-field {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      
+      @include onDesktop {
+        max-width: 50%;
+        border-bottom-width: 2px;
+      }
+
+      &-text {
+        font-size: 12px;
+        line-height: 14px;
+        color: #999;
+      }
+
+      &-input {
+        height: 36px;
+        font-family: 'Ubuntu';
+        font-size: 18px;
+        border: none; 
+        outline: none;
+      }
+
+      &-text-area {
+        resize: none;
+        height: 54px;
+      }
+
+      &-error-required {
+        color: red;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    &-submit {
+      cursor: pointer;
+      font-family: 'Ubuntu';
+      font-weight: 500;
+      line-height: 16px;
+      background: #FFBC00;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 20px 30px;
+      outline: none;
+      border: none;
+      transition: 300ms;
+
+      &:hover {
+        background: #c49000;
+      }
+
+      @include onDesktop {
+        margin-top: 50px;
+        width: 25%;
+      }
+    }
+  }
+
+  &__scroll-top {
+    position: sticky;
+    top: 90vh;
+    left: 90%;
+
+    &-img {
+      width: 40px;
+
+      @include onDesktop {
+        width: 50px;
+      }
+    }
+    
+  }
+}

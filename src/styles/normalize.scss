@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding: 0 25px;
+
+  @include onDesktop {
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,45 @@
+.menu {
+  position: fixed;
+  padding-top: 40px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: #FFBC00;
+  transition: 500ms;
+  transform: translateX(100%);
+  overflow: auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+  }
+
+  &__nav {
+    margin-bottom: 60px;
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      list-style: none;
+    }
+
+    &-link {
+      color: #000;
+      font-weight: 500;
+      font-size: 24px;
+      text-decoration: none;
+    }
+  }
+
+  &__services {
+    margin-bottom: 90px;
+    &-title {
+      font-size: 18px;
+      line-height: 160%;
+      margin-bottom: 28px;
+      opacity: 0.5;
+    }
+  }
+}

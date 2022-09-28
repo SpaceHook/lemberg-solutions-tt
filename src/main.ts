@@ -10,3 +10,11 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+window.addEventListener('hashchange', () => {
+  if (window.location.hash === '#menu') {
+    document.body.classList.add('with-menu');
+  } else {
+    document.body.classList.remove('with-menu');
+  }
+});

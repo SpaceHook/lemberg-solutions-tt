@@ -1,0 +1,175 @@
+@import '../../styles.scss';
+
+.header {
+  background-color: #FFBC00;
+  min-height: 100vh;
+  padding-top: 40px;
+  position: relative;
+
+  &__logo {
+    cursor: pointer;
+    transition: 300ms;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 65px;
+
+    @include onDesktop {
+      margin-bottom: 185px;
+    }
+  }
+
+  &__menu-link {
+    @include onDesktop {
+      display: none;
+    }
+  }
+  
+  &__nav {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+
+    }
+
+    &-list {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    &-item {
+      cursor: pointer;
+      border-radius: 12px;
+      padding: 14px;
+      transition: 300ms;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+
+    &-title {
+      font-family: 'Anton';
+      font-weight: 400;
+      font-size: 42px;
+      line-height: 130%;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      
+      @include onDesktop {
+        font-size: 68px;
+        transform: translateX(-80px);
+        margin-bottom: 33px;
+      }
+    }
+
+    &-scroll {
+      display: none;
+      width: 50px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 55px;
+      text-decoration: none;
+      transition: 300ms;
+
+      &:hover {
+        transform: translateY(5px);
+      }
+
+      @include onDesktop {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      &-name {
+        color: #000;
+        transform: rotate(-90deg);
+      }
+
+      &-image {
+        height: 30px;
+      }
+    }
+
+    &-text {
+      line-height: 160%;
+      max-width: 300px;
+      margin-bottom: 30px;
+
+      @include onDesktop {
+        font-size: 18px;
+        max-width: 560px;
+      }
+    }
+
+    &-button {
+      cursor: pointer;
+      font-family: 'Ubuntu';
+      font-weight: 500;
+      background: #FFF;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      border: none;
+      outline: none;
+      padding: 20px 40px;
+      transition: 300ms;
+      
+      &:hover {
+        background-color: #ddecff;
+      }
+
+      @include onDesktop {
+        margin-bottom: 65px;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    margin-left: auto;
+
+    &-desktop {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 450px;
+      width: 600px;
+      transform: translateX(200px);
+
+      @include onDesktop {
+        display: block;
+      }
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+}

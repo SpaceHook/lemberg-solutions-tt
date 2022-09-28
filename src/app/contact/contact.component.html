@@ -1,0 +1,143 @@
+<div class="contact" id="contact">
+  <a href="#" class="contact__scroll-top">
+    <img src="../../assets/top-arrow.svg" alt="" class="contact__scroll-top-img">
+  </a>
+  <div class="container">
+    <h2 class="contact__title">
+      <span class="contact__title-first">CONTACT</span>
+      US
+    </h2>
+
+    <form class="contact__form">
+      <div class="contact__form-field-wrapper">
+        <div
+          class="contact__form-field"
+          [ngStyle]="{ 'border-color': requiredFullName ? 'red' : '' }"
+        >
+          <span
+            class="contact__form-field-text"
+            [ngStyle]="{ color: requiredFullName ? 'red' : '' }"
+          >
+            Full Name
+          </span>
+          <input
+            type="text"
+            class="contact__form-field-input"
+            name="fullName"
+            [(ngModel)]="fullName"
+          />
+        </div>
+        <span
+          *ngIf="requiredFullName"
+          class="contact__form-field-error-required"
+        >
+          Full name is required
+        </span>
+      </div>
+
+      <div class="contact__form-field-wrapper">
+        <div
+          class="contact__form-field"
+          [ngStyle]="{ 'border-color': requiredCompanyName ? 'red' : '' }"
+        >
+          <span
+            class="contact__form-field-text"
+            [ngStyle]="{ color: requiredCompanyName ? 'red' : '' }"
+          >
+            Company Name
+          </span>
+          <input
+            type="text"
+            class="contact__form-field-input"
+            name="companyName"
+            [(ngModel)]="companyName"
+          />
+        </div>
+        <span
+          *ngIf="requiredCompanyName"
+          class="contact__form-field-error-required"
+        >
+          Company name is required
+        </span>
+      </div>
+
+      <div class="contact__form-field-wrapper">
+        <div
+          class="contact__form-field"
+          [ngStyle]="{ 'border-color': requiredPhoneNumber ? 'red' : '' }"
+        >
+          <span
+            class="contact__form-field-text"
+            [ngStyle]="{ color: requiredPhoneNumber ? 'red' : '' }"
+          >
+            Phone Number
+          </span>
+          <input
+            type="tel"
+            class="contact__form-field-input"
+            name="phoneNumber"
+            [(ngModel)]="phoneNumber"
+            placeholder="0987654321"
+          />
+        </div>
+        <span
+          *ngIf="requiredPhoneNumber"
+          class="contact__form-field-error-required"
+        >
+          Phone number is required
+        </span>
+        <span
+          *ngIf="errorValidPhoneNumber"
+          class="contact__form-field-error-required"
+        >
+          Phone Number is invalid
+        </span>
+      </div>
+
+      <div class="contact__form-field-wrapper">
+        <div
+          class="contact__form-field"
+          [ngStyle]="{ 'border-color': requiredEmail ? 'red' : '' }"
+        >
+          <span
+            class="contact__form-field-text"
+            [ngStyle]="{ color: requiredEmail ? 'red' : '' }"
+          >
+            E-mail
+          </span>
+          <input
+            type="email"
+            class="contact__form-field-input"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="email@gmail.com"
+          />
+        </div>
+        <span *ngIf="requiredEmail" class="contact__form-field-error-required">
+          Email is required
+        </span>
+        <span
+          *ngIf="errorValidEmail"
+          class="contact__form-field-error-required"
+        >
+          Email is invalid
+        </span>
+      </div>
+
+      <div class="contact__form-field-wrapper">
+        <div class="contact__form-field">
+          <span class="contact__form-field-text">Write Us Messages</span>
+          <textarea
+            class="contact__form-field-input contact__form-field-text-area"
+          ></textarea>
+        </div>
+      </div>
+      <input
+        type="submit"
+        value="Send Message"
+        class="contact__form-submit"
+        (click)="onSubmit($event)"
+      />
+    </form>
+  </div>
+</div>

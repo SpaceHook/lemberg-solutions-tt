@@ -1,27 +1,12 @@
-# LembergSolutionsTt
+Technologies used: JavaScript, TypeScript, Angular, HTML, CSS(SCSS), BEM. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+**Preview -** [LINK](https://spacehook.github.io//)  
+**Figma -** [LINK](https://www.figma.com/file/NbQYKhk0CNLi55XrBLhqe1/Angular-trainee-tech-task-design?node-id=0%3A1)  
 
-## Development server
+# Getting Started  
+1. Clone repository on your computer
+2. Open project folder with include
+3. Open terminal and enter `npm install` or `npm i`
+4. Run project `npm start`  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Thanks for this test :)

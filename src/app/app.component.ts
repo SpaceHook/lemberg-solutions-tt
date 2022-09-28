@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'lemberg-solutions-tt';
+  translateX = 'translateX(100%)';
+
+  visibleMenu() {
+    if (this.translateX === 'translateX(100%)') {
+      this.translateX = 'translateX(0)';
+    } else {
+      this.translateX = 'translateX(100%)';
+    }
+  }
 }
